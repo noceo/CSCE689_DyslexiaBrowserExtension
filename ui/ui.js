@@ -1,16 +1,16 @@
-let change_background_button = document.getElementById("changeBackground");
+let change_background_button = document.getElementById("change-background");
 
 change_background_button.addEventListener("click", async () => {
-    let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    chrome.scripting.executeScript({
-        target: {tabId: tab.id},
-        function: setBackgroundColor,
-    });
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setBackgroundColor,
+  });
 });
 
 function setBackgroundColor() {
-    chrome.storage.sync.get("background_color", ({background_color}) => {
-        document.body.style.backgroundColor = background_color;
-    });
+  chrome.storage.sync.get("background_color", ({ background_color }) => {
+    document.body.style.backgroundColor = background_color;
+  });
 }
