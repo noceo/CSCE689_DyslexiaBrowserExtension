@@ -41,7 +41,10 @@ increase_font_size.addEventListener("click", async () => {
 
 function setBackgroundColor() {
   chrome.storage.sync.get("background_color", ({ background_color }) => {
-    document.body.style.backgroundColor = background_color;
+    const elements = document.querySelectorAll("div");
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].style.backgroundColor = background_color;
+    }
   });
 }
 
