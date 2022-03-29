@@ -1,13 +1,13 @@
 {
-    "name": "Dyslexia Reading Extension",
-    "description": "An extension for helping people with dyslexia read webpages more easily.",
-    "version": "0.1",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "scripts/main.js"
-    },
-    "permissions": ["storage", "activeTab", "scripting"],
-    "action": {
-        "default_popup": "ui/ui.html"
-    }
+  "name": "Dyslexia Reading Extension",
+  "description": "An extension for helping people with dyslexia read webpages more easily.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "scripts/main.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "webNavigation"],
+  "action": {
+    "default_popup": "ui/ui.html"
+  }
 }
