@@ -5,6 +5,3 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ background_color: background_color });
 });
 
-chrome.webNavigation.onCompleted.addEventListener(() => {
-  console.log("OPEN");
-});
