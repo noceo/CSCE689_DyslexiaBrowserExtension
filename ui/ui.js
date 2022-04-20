@@ -46,6 +46,11 @@ function setBackgroundColor() {
     for (var i = 0; i < elements.length; i++) {
       elements[i].style.backgroundColor = background_color;
     }
+
+    const text_elements = document.querySelectorAll("p, span, a, li");
+    for (var i = 0; i < text_elements.length; i++) {
+      text_elements[i].style.color = "#000000";
+    }
   });
 }
 
