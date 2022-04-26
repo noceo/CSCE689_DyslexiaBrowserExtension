@@ -47,7 +47,7 @@ function setBackgroundColor() {
       elements[i].style.backgroundColor = background_color;
     }
 
-    const text_elements = document.querySelectorAll("p, span, a, li");
+    const text_elements = document.querySelectorAll("p, span, a, li, h1, h2, h3, h4, h5, h6");
     for (var i = 0; i < text_elements.length; i++) {
       text_elements[i].style.color = "#000000";
     }
@@ -56,7 +56,7 @@ function setBackgroundColor() {
 
 function setFont() {
   chrome.storage.sync.get("font", ({ font }) => {
-    const elements = document.querySelectorAll("p, span, a, li");
+    const elements = document.querySelectorAll("p, span, a, li, h1, h2, h3, h4, h5, h6");
     if (font === "---") {
       for (var i = 0; i < elements.length; i++) {
         elements[i].style.fontFamily = "";
